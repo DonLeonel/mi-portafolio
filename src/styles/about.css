@@ -1,0 +1,108 @@
+.sect-about {
+    margin: auto;
+    margin-top: 5%;
+    padding: 1rem 1.2rem;
+    background-color: lightgrey;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.Links-container-fab{    
+    text-align: center;
+    margin: 20px auto;    
+}
+.Links-container-fab a{
+    margin: 20px;
+}
+.Links-container-fab a i{     
+    font-size: 2.3rem;     
+}
+
+.fa-linkedin{
+    color: blue;    
+}
+.fa-github{
+    color: black;
+}
+
+.avatar-cont {
+    width: 50%;
+    border: blueviolet 3px solid;
+    box-shadow: 0 0 10px blueviolet;
+    border-radius: 10px;
+    padding: 9px 9px 5px 9px;
+    margin: 15px auto 10px auto;
+}
+
+.img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.about-text span {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.apellido {
+    color: blueviolet;
+}
+
+.parrafo {
+    font-size: 1.1rem;
+    line-height: 23px;
+    margin-top: 1rem;
+}
+
+@media(min-width: 500px){
+    .avatar-cont {        
+        width: 40%;        
+    }    
+}
+
+@media(min-width: 650px) {
+    .sect-about {
+        display: flex;
+        flex-wrap: wrap;        
+        align-items: center;        
+    }   
+
+    .Links-container-fab{    
+        display: flex;
+        flex-direction: column;         
+    }
+   
+    .about-text{   
+        margin: auto;       
+        width: 45%;
+    }
+
+    .avatar-cont {
+        margin: auto;
+        width: 30%;        
+    }
+}
+
+@media(min-width: 768px){
+    .sect-about{
+        margin-top: 20px;        
+    }
+    .avatar-cont {
+        width: 23%;
+    }
+}
+
+
+@media(min-width: 960px){
+    .avatar-cont {
+        width: 18%;
+        margin: auto
+    }
+}
+
+@media(min-width: 1200px){    
+    .sect-about {                
+        width: 70%;
+    }
+}

@@ -1,0 +1,23 @@
+.h5-subtitulo {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.container-fab {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 35px auto;
+    gap: 1.5rem;
+}
+.container-fab i {
+    font-size: 3rem;
+}
+
+.container-conoci {
+    margin: 0 0 10px 20px;
+}
+
+.container-conoci ul li{
+    margin-top: 8px;
+}
