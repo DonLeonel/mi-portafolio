@@ -2,8 +2,6 @@ import { ProjectsBoxCOMP } from "../components/ProjectsBoxCOMP"
 import '../styles/project.css'
 import cSharp from '../assets/cSharp.ico';
 import postgre from '../assets/postgre.ico';
-import react from '../assets/react.ico';
-import vite from '../assets/vite.ico'
 import expressJs from '../assets/ExpressJS.ico'
 import nodeJS from '../assets/nodeJS.ico'
 import mySql from '../assets/mySql.ico'
