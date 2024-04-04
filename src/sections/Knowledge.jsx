@@ -11,7 +11,7 @@ export const Knowledge = () => {
         <i title='Java Script' className="fab fa-js-square" aria-hidden="true"></i>
         <i title='React' className='fab fa-react' aria-hidden="true"></i>
         <i title='Npm' className="fab fa-npm" aria-hidden="true"></i>
-        <i title='Node.js' class="fa-brands fa-node" aria-hidden="true"></i>
+        <i title='Node.js' className="fa-brands fa-node" aria-hidden="true"></i>
         <i title='Github' className="fab fa-github" aria-hidden="true"></i>
         <i title='Bootstrap' className="fab fa-bootstrap" aria-hidden="true"></i>
         <i title='Java' className="fab fa-java" aria-hidden="true"></i>

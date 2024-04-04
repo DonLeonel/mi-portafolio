@@ -1,6 +1,6 @@
 import { NavBarCOMP } from './components/NavBarComp'
 import { FooterComp } from './components/FooterComp'
-import { About, Project, Knowledge, Studies, Interests } from './sections/index'
+import { About, Project, Knowledge, Studies } from './sections/index'
 
 
 export const App = () => {
@@ -10,8 +10,7 @@ export const App = () => {
       <About />
       <Project />
       <Knowledge />
-      <Studies />
-      <Interests />      
+      <Studies />           
       <FooterComp/>
     </>
   )

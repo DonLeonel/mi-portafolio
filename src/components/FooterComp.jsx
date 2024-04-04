@@ -10,7 +10,7 @@ export const FooterComp = () => {
         <a download='Cv-LeonelDon.pdf' aria-label='descargar currículum' href={cv} className='button-cv'>Descargar <br /> Currículum</a>
       </div>
       <div className='copirigth'>
-        <span><i className="fa-regular fa-copyright"></i><br />Copyright</span>
+        <span><i className="fa-regular fa-copyright"></i><br />Copyright 2024</span>
       </div>
     </footer>
   )

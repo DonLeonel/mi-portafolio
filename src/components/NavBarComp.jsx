@@ -35,10 +35,7 @@ export const NavBarCOMP = () => {
           </li>
           <li className="nav-menu-item">
             <a className="nav-menu-link" href="#estudios">Estudios</a>
-          </li>
-          <li className="nav-menu-item">
-            <a className="nav-menu-link" href="#intereses">Intereses</a>
-          </li>          
+          </li>                   
         </ul>
       </nav>
     </header>
