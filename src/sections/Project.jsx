@@ -11,7 +11,7 @@ import react from '../assets/iconsProject/react.ico'
 import mySql from '../assets/iconsProject/mySql.ico'
 import sequelize from '../assets/iconsProject/sequelize.ico'
 import nexoBirrero from '../assets/nexoBirrero.png'
-import UrlShortenerFront from '../assets/UrlShortener-Frontend.png'
+import urlShortenerFront from '../assets/urlShortenerFrontend.png'
 import boxImg from '../assets/boxProyectos.jpg'
 
 const iconUrlShortener = [nodeJS, react, vite, html, css, bootstrap]
@@ -27,7 +27,7 @@ export const Project = () => {
                 <ProjectsBoxCOMP
                     nombre='Url Shortener (Frontend)'
                     iconProject={iconUrlShortener}
-                    img={UrlShortenerFront}
+                    img={urlShortenerFront}
                     url='https://github.com/DonLeonel/urlShortener-frontend'
                     ariaLabel="navega hacia el proyecto alojado en github llamado Url Shortener (frontend)"
                 />
