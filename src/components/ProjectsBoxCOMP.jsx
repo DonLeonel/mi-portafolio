@@ -1,7 +1,6 @@
 import '../styles/projectsBoxCOMP.css'
-import boxImg from '../assets/boxProyectos.jpg'
 
-export const ProjectsBoxCOMP = ({ nombre = 'ProjectName', img = boxImg, iconProject = null, url, ariaLabel = '' }) => {
+export const ProjectsBoxCOMP = ({ nombre = 'ProjectName', img , iconProject = null, url, ariaLabel = '' }) => {
 
     return (
         <a target='_blank' className="box" href={url} aria-label={ariaLabel}>
