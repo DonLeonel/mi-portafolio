@@ -1,13 +1,13 @@
 import { techForProjects } from './imgTechProjects'
-import { UrlShortenerFrontend, imgBackend, nexoBirrero, hidraApp } from '../assets/boxProjects'
+import { urlShortenerFrontend, imgBackend, nexoBirrero, hidraApp } from '../assets/boxProjects'
 
 export const projectsGitHub = {
-    frontend: [
+    frontend: [ 
         {
             nombre: 'Url Shortener',
             iconProject: techForProjects.iconUrlShortenerFront,
             desc: 'Aplicación web para acortar URLs.',
-            img: UrlShortenerFrontend,
+            img: urlShortenerFrontend,
             url: 'https://github.com/DonLeonel/urlShortener-frontend',
             ariaLabel: "navega hacia el proyecto alojado en github llamado Url Shortener"
         },
