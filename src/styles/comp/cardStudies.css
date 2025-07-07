@@ -1,0 +1,15 @@
+.card-estudio {   
+
+    & .establecimiento {
+        padding-left:15px;
+        color: #696969;
+    }   
+
+    & .duracion {
+        padding-left:22px;        
+        & span {
+            font-size: 12px;
+            color: rgb(70, 70, 153);
+        }
+    }
+}

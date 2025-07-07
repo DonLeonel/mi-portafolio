@@ -1,33 +1,76 @@
+import { SectionComp } from '../components/index'
 import '../styles/knowledge.css'
 
 export const Knowledge = () => {
-  return (
-    <section className='section' id='conocimientos'>
-      <h2 className='h2-subtitulos'>Conocimientos<span className="punto">.</span></h2>
-      <h5 className='h5-subtitulo'>Lenguajes de Programación y Herramientas</h5>
-      <div className='container-fab'>
-        <i title='Html 5' className="fab fa-html5" aria-hidden="true"></i>
-        <i title='Css 3' className="fab fa-css3-alt" aria-hidden="true"></i>
-        <i title='Java Script' className="fab fa-js-square" aria-hidden="true"></i>
-        <i title='React' className='fab fa-react' aria-hidden="true"></i>
-        <i title='Npm' className="fab fa-npm" aria-hidden="true"></i>
-        <i title='Node.js' className="fa-brands fa-node" aria-hidden="true"></i>
-        <i title='Github' className="fab fa-github" aria-hidden="true"></i>
-        <i title='Bootstrap' className="fab fa-bootstrap" aria-hidden="true"></i>
-        <i title='Java' className="fab fa-java" aria-hidden="true"></i>
+
+  return (    
+  
+    <SectionComp idSection='conocimientos' title='Conocimientos y Habilidades Técnicas' className='title-sections'>
+      <div className='container-knowledge'>
+
+        <div className="knowledge-group">
+          <h4>🎨 Frontend</h4>
+          <ul>
+            <li>HTML5, CSS3, diseño responsive.</li>
+            <li>Bootstrap, Tailwind CSS.</li>
+            <li>React, Astro.</li>
+            <li>Validación de formularios, consumo de APIs, manejo de estado.</li>
+          </ul>
+        </div>
+
+        <div className="knowledge-group">
+          <h4>🛠️ Backend</h4>
+          <ul>
+            <li>Express.js, NestJS.</li>
+            <li>ASP.NET Core, Spring Boot.</li>
+            <li>Desarrollo de APIs RESTful.</li>
+            <li>Autenticación con JWT y OAuth 2.0.</li>
+          </ul>
+        </div>
+
+        <div className="knowledge-group">
+          <h4>🗄️ Bases de Datos</h4>
+          <ul>
+            <li>PostgreSQL, MySQL, MongoDB, Oracle.</li>
+            <li>Redis (almacenamiento en caché).</li>
+          </ul>
+        </div>
+
+        <div className="knowledge-group">
+          <h4>📦 ORMs y Acceso a Datos</h4>
+          <ul>
+            <li>Entity Framework Core, Hibernate.</li>
+            <li>Sequelize, Prisma.</li>
+            <li>ADO.NET.</li>
+          </ul>
+        </div>
+
+        <div className="knowledge-group">
+          <h4>⚙️ Herramientas</h4>
+          <ul>
+            <li>Git, GitHub, Docker.</li>
+            <li>Postman, Swagger.</li>
+            <li>Figma para diseño y prototipado.</li>
+          </ul>
+        </div>
+
+        <div className="knowledge-group">
+          <h4>📋 Metodologías</h4>
+          <ul>
+            <li>Scrum, desarrollo ágil.</li>
+            <li>Trabajo colaborativo y buenas prácticas de código.</li>
+          </ul>
+        </div>
+
       </div>
 
-      <div className='container-conoci'>
-        <ul>
-          <li>Diseños responsivos con Html, Css y Bootstrap.</li>          
-          <li>Desarrollo web con Express.js, ASP.NET Core y SpringBoot.</li>          
-          <li>Desarrollo FrontEnd con React.</li>
-          <li>Manejo de Orms (Entity F. Core - Hibernate - Sequelize).</li>
-          <li>ADO.Net.</li>
-          <li>Maquetación con Figma.</li>
-        </ul>
+      <div className="tech-icons-container">
+        {/*Object.entries(icons).map(([name, icon]) => (
+          <div className="tech-icon" key={name}>
+            <img src={icon} alt={name} title={name} />            
+          </div>
+        ))*/}
       </div>
-    </section>
+    </SectionComp>
   )
 }
-

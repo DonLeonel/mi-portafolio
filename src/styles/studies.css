@@ -1,23 +1,17 @@
-.establecimiento{     
-    font-size: 1.2rem;
+.container-card-studies {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+    & .subtitulo-estudio-complementario{
+        margin-top: 10px;
+        & h3 {
+            text-decoration: underline;
+        }
+
+         & p {
+            color: #696969;
+         }
+    }
 }
-
-.modulo-estudio{
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.subtitulo{    
-    font-size: 16px;
-}
-
-.margenes{
-    margin: 10px 0;
-}
-
-.duracion{
-    font-size: 15px;
-    color: blue;    
-}
-
-

@@ -1,52 +1,63 @@
-import { ProjectsBoxCOMP } from "../components/ProjectsBoxCOMP"
+import { SectionComp, ProjectsBoxCOMP } from "../components"
+import { useState } from 'react'
+import { projectsGitHub } from '../utils/projectsGitHub'
 import '../styles/project.css'
-import expressJs from '../assets/iconsProject/express-js.png'
-import nodeJS from '../assets/iconsProject/nodeJS.ico'
-import bootstrap from '../assets/iconsProject/bootstrap.ico'
-import vite from '../assets/iconsProject/vite.ico'
-import html from '../assets/iconsProject/html5.ico'
-import css from '../assets/iconsProject/css.ico'
-import ejs from '../assets/iconsProject/ejs.ico'
-import react from '../assets/iconsProject/react.ico'
-import mySql from '../assets/iconsProject/mySql.ico'
-import sequelize from '../assets/iconsProject/sequelize.ico'
-import nexoBirrero from '../assets/nexoBirrero.png'
-import urlShortenerFront from '../assets/urlShortenerFrontend.png'
-import imgBackend from '../assets/imgBackend.png'
-
-
-const iconUrlShortener = [nodeJS, react, vite, html, css, bootstrap]
-const iconUrlShortenerBackend = [nodeJS, expressJs, mySql, sequelize]
-const iconNexoBirrero = [nodeJS, expressJs, ejs, css, mySql, sequelize]
 
 export const Project = () => {
-    return (
-        <section className="section" id='proyectos'>
-            <h2 className="h2-subtitulos" >Proyectos en Github<span className="punto">.</span></h2>
-            <div className='containerBox'>
 
-                <ProjectsBoxCOMP
-                    nombre='Url Shortener (Frontend)'
-                    iconProject={iconUrlShortener}
-                    img={urlShortenerFront}
-                    url='https://github.com/DonLeonel/urlShortener-frontend'
-                    ariaLabel="navega hacia el proyecto alojado en github llamado Url Shortener (frontend)"
-                />
-                <ProjectsBoxCOMP
-                    nombre='Url Shortener (API-Backend)'
-                    iconProject={iconUrlShortenerBackend}
-                    img={imgBackend}
-                    url='https://github.com/DonLeonel/urlShortener-backend'
-                    ariaLabel="navega hacia el proyecto alojado en github llamado Url Shortener (backend)"
-                />
-                <ProjectsBoxCOMP
-                    nombre='nexoBirrero (E-Commerce)'
-                    iconProject={iconNexoBirrero}
-                    img={nexoBirrero}
-                    url='https://github.com/DonLeonel/grupo_6_nexoBirrero_E-Commerce'
-                    ariaLabel="navega hacia el proyecto alojado en github llamado nexoBirrero"
-                />
+    const [selectedFilter, setSelectedFilter] = useState('frontend')
+
+    const handleFilterFront = () => setSelectedFilter('frontend')
+    const handleFilterBack = () => setSelectedFilter('backend')
+    const handleFilterFullStack = () => setSelectedFilter('fullStack')
+
+    // Obtenemos el array de proyectos que se deben renderizar
+    const filteredProjects = projectsGitHub[selectedFilter] || []
+
+    return (
+        <SectionComp idSection="proyectos" title={'Proyectos en Github'} >
+
+            <ul className='container-filterProjects'>
+                <li>
+                    <button
+                        onClick={handleFilterFront}
+                        className={selectedFilter === 'frontend' ? 'active-filter' : ''}
+                    >
+                        Frontend
+                    </button>
+                </li>
+                <li>
+                    <button
+                        onClick={handleFilterBack}
+                        className={selectedFilter === 'backend' ? 'active-filter' : ''}
+                    >
+                        Backend
+                    </button>
+                </li>
+                <li>
+                    <button
+                        onClick={handleFilterFullStack}
+                        className={selectedFilter === 'fullStack' ? 'active-filter' : ''}
+                    >
+                        Full-Stack
+                    </button>
+                </li>
+            </ul>
+
+            <div className='containerBox'>
+                {filteredProjects.map((proyecto, i) => (
+                    <ProjectsBoxCOMP
+                        key={i}
+                        nombre={proyecto.nombre}
+                        className={proyecto.className ? proyecto.className : ''}
+                        iconProject={proyecto.iconProject}
+                        desc={proyecto.desc}
+                        img={proyecto.img}
+                        url={proyecto.url}
+                        ariaLabel={proyecto.ariaLabel}
+                    />
+                ))}
             </div>
-        </section>
+        </SectionComp>
     )
 }

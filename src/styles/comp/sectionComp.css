@@ -1,0 +1,27 @@
+.conteiner-section {
+    scroll-margin-top: 160px;
+
+    border: solid 3px;
+    border-radius: var(--border-radius);
+    padding: 5px 15px 15px 15px;
+    margin: 20px auto;
+    background-color: lightgrey;
+    box-shadow: 0 0 10px black;
+
+    width: 95%;
+    max-width: 990px;
+
+    & .title-section {
+
+        margin-bottom: 10px;
+        color: var(--secondary-color);
+        text-decoration: underline 3px var(--primary-color);
+        text-transform: uppercase;
+    }
+
+    & .punto {
+        text-decoration: none;
+        font-size: 30px;
+        color: var(--primary-color);
+    }
+}

@@ -1,17 +1,20 @@
 import { NavBarCOMP } from './components/NavBarComp'
 import { FooterComp } from './components/FooterComp'
-import { About, Project, Knowledge, Studies } from './sections/index'
-
+import { About, Project, Knowledge, Studies, Header, Certifications } from './sections/index'
 
 export const App = () => {
   return (
     <>
       <NavBarCOMP />
-      <About />
+      <Header />
       <Project />
       <Knowledge />
-      <Studies />           
-      <FooterComp/>
+      <About />
+        <Studies />
+      {/*<div className='cont-sections-studies-certifications'>
+        <Certifications />
+      </div>*/}
+      <FooterComp />
     </>
   )
 }

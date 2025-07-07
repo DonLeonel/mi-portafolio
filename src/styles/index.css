@@ -1,40 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {    
+:root {
+    /*colores*/
+    --primary-color: blueviolet;
+    --secondary-color: black;
+    --text-color: white;
+    --background-color: #aeaeae;
+
+    /*fuentes*/
+    --font-family: 'Roboto', sans-serif;
+
+    /*espaciado*/
+    --border-radius: 10px;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
-body {       
-    background-color: #aeaeae;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 115px;   
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    margin-top: 100px;
     min-width: 280px;
 }
 
-.section{   
-    border: solid 3px;
-    border-radius: 10px;      
-    padding: 10px 20px; 
-    margin: 40px auto;
-    background-color: lightgrey;
-    box-shadow: 0 0 10px black;
-
-    width: 90%;
-    max-width: 1000px;      
+@media (min-width: 768px) {
+    .cont-sections-studies-certifications {
+        max-width: 990px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        gap: 2rem;
+        padding: 0 10px;
+    }
 }
 
-.h2-subtitulos{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    text-decoration: underline 3px blueviolet;    
-    text-transform: uppercase;         
-}
-
-.punto {    
-    text-decoration: none;
-    font-size: 30px;
-    color: blueviolet;
+@media (min-width: 990px) {
+    .cont-sections-studies-certifications {
+        padding: 0;
+    }
 }
